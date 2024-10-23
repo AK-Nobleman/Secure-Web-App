@@ -1,0 +1,75 @@
+* {
+    /* digunakan untuk penyesuaiain box pada setiap web browser */
+    box-sizing: border-box;
+}
+
+.people {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texthere{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    line-height: 1.5;
+}
+
+.plus-jakarta-sans{
+font-family: "Plus Jakarta Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: weight;
+font-style: normal;
+}
+
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+nav {
+    flex-grow: 1; 
+    flex-grow: 3;
+    flex-grow: 1; 
+    text-align: right;
+
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
