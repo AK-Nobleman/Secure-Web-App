@@ -1,0 +1,91 @@
+* {
+    /* digunakan untuk penyesuaiain box pada setiap web browser */
+    box-sizing: border-box;
+}
+
+
+.plus-jakarta-sans{
+font-family: "Plus Jakarta Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: weight;
+font-style: normal;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+nav {
+flex-grow: 1; 
+flex-grow: 3;
+flex-grow: 1; 
+text-align: right;
+
+}
+nav a {
+text-decoration: none;
+color: black;
+font-size: 18px;
+font-weight: bold;
+margin-right: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    border-width: 5px;
+    border-radius: 1opx;
+    padding: 150px;
+}
+
+.container {
+    text-align: center;
+}
+.button {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+.login {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+.register {
+    background-color: #3563E9;
+    color: white;
+}
+.or {
+    margin: 10px 0;
+    font-size: 18px;
+}

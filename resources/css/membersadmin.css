@@ -1,0 +1,149 @@
+* {
+    /* digunakan untuk penyesuaiain box pada setiap web browser */
+    box-sizing: border-box;
+}
+
+
+.plus-jakarta-sans{
+font-family: "Plus Jakarta Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: weight;
+font-style: normal;
+}
+
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+nav {
+    flex-grow: 1; 
+    flex-grow: 3;
+    flex-grow: 1; 
+    text-align: right;
+
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+.container {
+    justify-content: center;
+    padding: 40px;
+
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile-header img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+.profile-header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0;
+}
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+.tabs a {
+    text-decoration: none;
+    color: #2c3e50;
+    margin-right: 20px;
+    font-weight: bold;
+}
+.tabs a.active {
+    color: #3563E9;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+.buttons button {
+    margin-top: 20p;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.buttons .cancel {
+    background-color: #ffffff;
+    color: #2c3e50;
+    border: 1px solid #dcdcdc;
+    margin-right: 10px;
+}
+.buttons .save {
+    background-color: #3563E9;
+    color: #ffffff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    color: black;
+    font-size: 14px;
+}
+td {
+    color: black;
+    font-size: 16px;
+}
+.member-name {
+    background-color: #f5f7fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+}
+.status {
+    color: #4a4a4a;
+    font-size: 14px;
+}
+.action-button {
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+.action-button i {
+    margin-right: 4px;
+}
