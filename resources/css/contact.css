@@ -12,7 +12,7 @@ font-style: normal;
 }
 
 .middle{
-    margin-top: 110px;
+    margin-top: 5%;
     margin-left: 250px;
 }
 
@@ -77,24 +77,24 @@ footer {
 /* CSS BAGIAN FORM */
 
 .rightcontainer{
-    margin-top: 100px;
+    margin-top: 5%;
     float: right;
     width: 60%;
 }
 
 form {
-max-width: 400px;
+max-width: 40%;
 margin: 0 auto; /* Center the form horizontally */
 padding: 20px;
 }
 
 .form-group {
-margin-bottom: 15px;
+margin-bottom: 5%;
 }
 
 label {
 display: block;
-margin-bottom: 5px;
+margin-bottom: 1%;
 }
 
 input, textarea {

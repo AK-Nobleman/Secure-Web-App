@@ -4,7 +4,7 @@
 }
 
 .people {
-    margin-top: 100px;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 15%;
+    margin-right: 15%;
     line-height: 1.5;
 }
 

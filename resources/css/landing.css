@@ -11,11 +11,68 @@ font-weight: weight;
 font-style: normal;
 }
 
+.button-container {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    gap: 1%;
+}
+
+.login-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 100%;
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Add spacing below the login button */
+}
+
+.register-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10%; 
+    margin-top: 10%; /* Add spacing above the register button */
+}
+
+
+.welcome, .p1{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    margin-left: 90%;
+    margin-right: 90%;
+}
+
 body {
+    background-size: cover;
     font-family: 'Plus Jakarta Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: white;
+}
+
+.holy{
+    margin-top: 4%;
+    margin-right: 8%;
+    margin-left: 8%;
+    font-size: 120%;
+    display: block;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.5;
 }
 
 header {
@@ -28,64 +85,25 @@ header {
 }
 
 nav {
-flex-grow: 1; 
-flex-grow: 3;
-flex-grow: 1; 
-text-align: right;
+    flex-grow: 1; 
+    flex-grow: 3;
+    flex-grow: 1; 
+    text-align: right;
 
 }
 nav a {
-text-decoration: none;
-color: black;
-font-size: 18px;
-font-weight: bold;
-margin-right: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 50px;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 2%;
     position: absolute;
     bottom: 0;
     width: 100%;
     color: black;
-}
-
-h1 {
-    padding-top: 20px;
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-    border-width: 5px;
-    border-radius: 1opx;
-    padding: 150px;
-}
-
-.container {
-    text-align: center;
-}
-.button {
-    display: block;
-    width: 150px;
-    padding: 10px;
-    margin: 10px auto;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-}
-.login {
-    border: 1px solid black;
-    color: black;
-    background-color: white;
-}
-.register {
-    background-color: #3563E9;
-    color: white;
-}
-.or {
-    margin: 10px 0;
-    font-size: 18px;
 }
