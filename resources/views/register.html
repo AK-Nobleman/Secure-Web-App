@@ -27,19 +27,22 @@
                     <option value="head">Head</option>
                     <option value="member">Member</option>
                 </select>
+
                 <label for="upload-ktp">Upload KTP</label>
-                <input type="file" id="upload-ktp" name="upload-ktp">
+                <input type="file" id="upload-ktp" name="upload-ktp" accept="image/*" onchange="previewKTP(event)">
+
                 <div class="form-group">
                     <label for="nik">NIK</label>
                     <input type="text" class="form-control" id="nik" placeholder="Enter NIK">
                 </div>
 
-            <button type="submit">Register</button>
+                <button type="submit">Register</button>
             </form>
         </div>
         
         <div class="preview-container">
-            <p>Preview KTP</p>
+            <!-- Tambahkan img untuk tempat preview -->
+            <img id="ktpPreview" src="" style="max-width: 100%; max-height: 200px; border: 1px dashed #ccc;">
         </div>
     </div>
 
@@ -47,5 +50,22 @@
         @ 2024 NexaHome. All Rights Reserved.
     </footer>
 
+    <!-- JavaScript untuk preview gambar -->
+    <script>
+        function previewKTP(event) {
+            const ktpPreview = document.getElementById('ktpPreview');
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    ktpPreview.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                ktpPreview.src = ""; // Kosongkan preview jika tidak ada file
+            }
+        }
+    </script>
 </body>
 </html>
