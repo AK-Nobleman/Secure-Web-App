@@ -4,26 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="/resources/css/about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Ini bagian Header (bisa copas untuk dipake di semua) -->
-<header>
-    <a href=landing.html><h1 style="display:inline-block; margin-left: 10px; color: #3563E9;">NexaHome</h1></a>
 
+<header>
+    <h1 class="header-text" ><a href="{{ route('Landing') }}" class="home">NexaHome</a></h1>
     <nav>
-        <a href="contact.html">Contact Us</a>
-        <a style="color: #3563E9;" href="about.html">About Us</a>
-        <a href="#">Register</a>
-        <a href="#">Login</a>
+        <a href="{{ route('Contact') }}" class="btn btn-primary contact-btn">Contact Us |</a>
+        <a href="{{ route('About') }}" class="btn btn-primary contact-btn" style="color: #3563E9;">About Us |</a>
+        <a href="{{ route('Login') }}" class="btn btn-primary contact-btn">Login |</a>
     </nav>
 </header>
 
 <div class="people">
-<img height="170px" src="/resources/images/aboutus/multiple-users-silhouette.png" alt="People">
+<img height="170px" src="{{ asset('images/aboutus/multiple-users-silhouette.png') }}" alt="People">
 </div>
 
 <div class="aboutus">

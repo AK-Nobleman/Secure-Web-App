@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.header-text {
+    display: inline-block;
+    margin-left: 2%;
+    color: #3563E9;
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 1% 2%;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 5%;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.home {
+    text-decoration: none;
+    color: #3563E9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 90%;
+    margin: 10% auto; /* Adjusted for fixed header */
+    padding: 2%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container {
+    width: 60%; /* Percent based width */
+}
+
+.preview-container {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 5%;
+    margin-bottom: 20%;
+}
+
+h1 {
+    text-align: left;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 2% 0 1%;
+}
+
+input[type="text"], input[type="password"], input[type="file"], select {
+    padding: 2%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 3%;
+}
+
+input[type="file"] {
+    padding: 0;
+}
+
+button {
+    padding: 2%;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    margin-bottom: 3%;
+}
+
+.form-control, .form-control-file {
+    width: 100%;
+    padding: 2%;
+    margin-top: 1%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+    color: #3563E9;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ktp{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left {
+    flex: 2; /* Left side takes up more space */
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    width: 80%;
+    height: auto;
+}
+
+.ktp, .head {
+    visibility: visible; /* Ensure divs are visible by default */
+}
+
+.ktp[style*="visibility: hidden"], .head[style*="visibility: hidden"] {
+    visibility: hidden; /* Hidden but not removed from DOM */
+}
+
+.error {
+    display: block; /* Make sure the error is displayed */
+}

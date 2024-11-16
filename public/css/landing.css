@@ -1,0 +1,147 @@
+/* General box-sizing rule for consistent box model */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-size: cover;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Buttons container */
+.button-container {
+    margin-top: 5vh; /* Use viewport height for better scaling */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* Buttons styling */
+.login-button, .register-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem; 
+    padding: 0.5rem 1.5rem; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+/* For consistent margins on text and containers */
+.welcome, .p1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem; /* Use rem for padding */
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    margin: 0 5vw; /* Use viewport width for responsive margins */
+}
+
+/* Main content styling */
+.holy {
+    margin-top: 10vh;
+    margin: 0 5vw; /* Use viewport width */
+    font-size: 1rem; /* Use rem for responsive text */
+    display: block;
+    color: black;
+    padding: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+header {
+    background-color: #fff;
+    padding: 1.5rem; /* Responsive padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.header-text{
+    display:inline-block; 
+    margin-left: 10px; 
+    color: #3563E9;
+}
+
+.contact-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+.contact-btn:hover {
+    color: #3563E9;
+  }
+
+/* Navigation */
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem; /* Responsive font size */
+    font-weight: bold;
+    margin-right: 3vw; /* Use viewport width */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .button-container {
+        margin-top: 5vh;
+        gap: 8px;
+    }
+
+    .login-button, .register-button {
+        font-size: 0.9rem; /* Smaller font size on mobile */
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+    }
+
+    .welcome, .p1, .holy {
+        margin: 0 3vw; /* Adjust margin for smaller screens */
+    }
+
+    nav a {
+        font-size: 0.9rem; /* Adjust navigation font size */
+        margin-right: 2vw;
+    }
+}
+
+.login-button:hover {
+    background-color: #2f89fe;
+
+  }
+.font{
+    font-size: 110%;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+  }

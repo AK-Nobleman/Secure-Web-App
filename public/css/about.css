@@ -43,13 +43,20 @@ body {
 
 header {
     background-color: #fff;
-    padding: 20px;
+    padding: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #ddd;
 }
 
+
+.header-text{
+    display:inline-block; 
+    margin-left: 10px; 
+    color: #3563E9;
+    text-decoration: none;
+}
 nav {
     flex-grow: 1; 
     flex-grow: 3;
@@ -73,3 +80,23 @@ footer {
     width: 100%;
     color: black;
 }
+
+.contact-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+.contact-btn:hover {
+    color: #3563E9;
+  }
+
+  .home{
+    text-decoration: none;
+    color: #3563E9;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+  }

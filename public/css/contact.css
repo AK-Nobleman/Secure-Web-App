@@ -1,0 +1,210 @@
+/* General box-sizing rule for consistent box model */
+* {
+    box-sizing: border-box;
+}
+
+.plus-jakarta-sans {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* Responsive margin */
+.middle {
+    margin-top: 10vh; /* Use viewport height */
+    margin-left: 10%; /* Use percentage for horizontal margins */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contact-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+.contact-btn:hover {
+    color: #3563E9;
+  }
+
+.leftcolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    margin-top: 3%;
+    margin-right: 85%;
+}
+.image-container1{
+    margin-top: 3%;
+    margin-right: 90%;
+}
+.image-container2{
+    margin-top: 5%;
+    margin-right: 75%;
+}
+
+body {
+    background-size: cover;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+
+.header-text{
+    display:inline-block; 
+    margin-left: 10px; 
+    color: #3563E9;
+    text-decoration: none;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem; 
+    font-weight: bold;
+    margin-right: 5%; 
+}
+
+
+footer {
+    text-align: center;
+    padding: 2%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+/* CSS for Form Layout */
+.rightcontainer {
+    margin-top: 10vh; /* Use viewport height */
+    float: right;
+    width: 60%;
+    position: relative;
+    top: -10vh;
+}
+
+form {
+    max-width: 80%; /* Use percentage for form width */
+    margin: 0 auto; /* Center the form */
+    padding: 5%; /* Use percentage for padding */
+}
+
+.form-group {
+    margin-bottom: 5%; /* Use percentage for spacing */
+}
+
+label {
+    display: block;
+    margin-bottom: 1%; /* Use percentage for spacing */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 2%; /* Use percentage for padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 20vh; /* Use viewport height for height */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 2% 5%; /* Use percentage for padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0062cc;
+}
+
+.up {
+    position: relative;
+    top: -10vh; /* Use viewport height */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 10vh; /* Use viewport height for padding */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 2%; /* Use percentage for padding */
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-footer {
+    padding: 2%; /* Use percentage for padding */
+    text-align: center;
+}
+
+
+
+.form-move{
+    margin-top: -5%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;  
+  }
+.home{
+    text-decoration: none;
+    color: #3563E9;
+  }
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+  body {
+    padding-bottom: 40px; /* Ensure content does not overlap footer */
+}

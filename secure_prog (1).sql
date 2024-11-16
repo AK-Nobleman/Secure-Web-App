@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2024 at 09:26 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Nov 16, 2024 at 08:06 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,6 +48,18 @@ CREATE TABLE `cache_locks` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `delacc`
+--
+
+CREATE TABLE `delacc` (
+  `family_id` varchar(6) DEFAULT NULL,
+  `reason` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `device`
 --
 
@@ -57,6 +69,13 @@ CREATE TABLE `device` (
   `device_type` varchar(20) NOT NULL,
   `permission` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `device`
+--
+
+INSERT INTO `device` (`family_id`, `device_name`, `device_type`, `permission`) VALUES
+('ASD39', 'asdf', 'Camera', 2);
 
 -- --------------------------------------------------------
 
@@ -82,9 +101,17 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `family_member` (
   `family_id` varchar(5) NOT NULL,
-  `usename` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `family_member`
+--
+
+INSERT INTO `family_member` (`family_id`, `username`, `password`) VALUES
+('ASD39', 'asdfqwer', '$argon2id$v=19$m=65536,t=4,p=1$MjB0bWFKZkJxUWt4cDZoaw$L4WZ0TF8hynxWMYukYnZW2I7daiNwUpSzlWeDweZbCE'),
+('ASD39', 'qwaszx', '$argon2id$v=19$m=65536,t=4,p=1$SEdkTkFxSDFvSi5Vby5jVw$AMr/AzEmE2FFitHrFUh1MCwpjZdUAEDpVZq6s4Ce+Ao');
 
 -- --------------------------------------------------------
 
@@ -104,7 +131,11 @@ CREATE TABLE `head` (
 --
 
 INSERT INTO `head` (`family_id`, `username`, `password`, `family_member`) VALUES
-('ADM01', '$argon2id$v=19$m=65536,t=4,p=1$SXF1V1dzQlJIaE90MnM4Vg$6cYFgGC+DCMhOzjReD65aNHE15lgYLY2OOan032TeaY', '$argon2id$v=19$m=65536,t=4,p=1$Q3pKZ1MuSkNmTHNOQTEyQw$K1cYNjAxrkmTo9/D6G4KKxDI9EFa2wowEcErq5Lv8RU', 0);
+('ADM01', '4D1mI4123', '$argon2id$v=19$m=65536,t=4,p=1$eXVjZktkd0o2bE1rZEw5eQ$/luLtXYw4kCk1AZA8l5EAS+rB42cr1WyuCMJ6fX74wo', 0),
+('ADS38', 'adsfasdfa', '$argon2id$v=19$m=65536,t=4,p=1$Y3U1NmYyZ25hbnB0a25mZg$UXA+GmGwBMmZHcGkLiFq/HRWWpW8g+c/Y96fWu+TNEw', 0),
+('ASD39', 'asdfas', '$argon2id$v=19$m=65536,t=4,p=1$cHJ2UUZ0c05udGI5YUo2SQ$J1+Vl5wkZcgMKqzaR1hT8sgL8N9TfMkCd7vxK+zRe5U', 2),
+('QWE44', 'qwert', '$argon2id$v=19$m=65536,t=4,p=1$YzFFWjEzUTdTNEM4ZTRXNA$32b35fVxW/LCZF6PychO+OYhW7AsNbr8+/uWvIHg+QM', 0),
+('ZXC50', 'zxcvbnm', '$argon2id$v=19$m=65536,t=4,p=1$RnlmNmtCekpIdlhoQnZSRw$H4lqCbF7OAZx992eOUWZYb/ZfTGenDw4z6GP1kCeZOw', 0);
 
 -- --------------------------------------------------------
 
@@ -181,9 +212,11 @@ CREATE TABLE `password_reset_tokens` (
 --
 
 CREATE TABLE `photo` (
-  `family_id` varchar(5) NOT NULL,
+  `family_id` varchar(6) NOT NULL,
   `image_name` varchar(255) NOT NULL,
-  `image_path` varchar(255) NOT NULL
+  `image_path` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -198,8 +231,39 @@ CREATE TABLE `sessions` (
   `ip_address` varchar(45) DEFAULT NULL,
   `user_agent` text DEFAULT NULL,
   `payload` longtext NOT NULL,
-  `last_activity` int(11) NOT NULL
+  `last_activity` int(11) NOT NULL,
+  `role` varchar(6) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `family_id` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sessions`
+--
+
+INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`, `role`, `username`, `family_id`) VALUES
+('ICcpCjo74kdlDlDiNBhDwWLuY42D2xq50jnpb7Ub', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 OPR/114.0.0.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiU3hPaXFPOGtrWW03ZzBCZzNyRk1zeU83Y3Exck1rUTFuOEhCeHB0OCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9EYXNoYm9hcmQiO31zOjQ6InJvbGUiO3M6NToiQWRtaW4iO3M6ODoidXNlcm5hbWUiO3M6OToiNEQxbUk0MTIzIjtzOjk6ImZhbWlseV9pZCI7czo1OiJBRE0wMSI7fQ==', 1731740703, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `suggestions`
+--
+
+CREATE TABLE `suggestions` (
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `suggestions` varchar(255) DEFAULT NULL,
+  `updated_at` varchar(255) DEFAULT NULL,
+  `created_at` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `suggestions`
+--
+
+INSERT INTO `suggestions` (`name`, `email`, `suggestions`, `updated_at`, `created_at`) VALUES
+('Axel asdfa', 'asdf@asdfas', 'asdfadfadfasdf', '2024-11-15 23:37:20', '2024-11-15 23:37:20');
 
 -- --------------------------------------------------------
 
@@ -312,12 +376,6 @@ ALTER TABLE `password_reset_tokens`
   ADD PRIMARY KEY (`email`);
 
 --
--- Indexes for table `photo`
---
-ALTER TABLE `photo`
-  ADD KEY `family_id` (`family_id`);
-
---
 -- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
@@ -375,12 +433,6 @@ ALTER TABLE `device`
 --
 ALTER TABLE `family_member`
   ADD CONSTRAINT `family_member_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `head` (`family_id`);
-
---
--- Constraints for table `photo`
---
-ALTER TABLE `photo`
-  ADD CONSTRAINT `photo_ibfk_1` FOREIGN KEY (`family_id`) REFERENCES `head` (`family_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
