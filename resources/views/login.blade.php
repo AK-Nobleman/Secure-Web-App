@@ -37,7 +37,10 @@
                         <div class="error">{{ $message }}</div>
                     @enderror
                 </div>
-                <button type="submit" href="{{ route('Landing') }}">Login</button>
+                <form action="{{ route('Dashboard') }}" method="POST">
+                    <input type="hidden" value="{{session('family_head')}}">
+                    <button type="submit" href="{{ route('Landing') }}">Login</button>
+                </form>
             </form>
             <nav class="register"> Don't have an account <a href="{{ route('Register') }}" class="regist">Register Here</a></nav>
         </div>

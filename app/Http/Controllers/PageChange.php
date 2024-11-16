@@ -26,10 +26,9 @@ class PageChange extends Controller
     public function VerificationPage(){
         return view('Verification');
     }
-    public function DashboardPage(Request $request)
+    public function DashboardPage()
 {
-    $familyHeadId = $request->input('family_id');
-
+    $familyHeadId = session('family_id');
     $devices = DB::table('device')
                 ->where('family_id', $familyHeadId) 
                 ->get();

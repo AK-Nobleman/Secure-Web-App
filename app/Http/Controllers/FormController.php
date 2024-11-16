@@ -176,8 +176,7 @@ class FormController extends Controller
 }
     public function rejectRequest(Request $request){
         $familyId = $request->input('family_id');
-        
-
+    
         DB::table('photo')
             ->where('family_id', $familyId)
             ->delete();
